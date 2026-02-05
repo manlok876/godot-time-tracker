@@ -3,7 +3,7 @@ extends EditorPlugin
 
 var _dock_instance : Control
 
-const STORED_SESSIONS_PATH : String = "res://.tracked-sessions.json"
+const STORED_SESSIONS_PATH : String = "user://.tracked-sessions.json"
 
 func _enter_tree() -> void:
 	_dock_instance = load("res://addons/time-tracker/ui/TrackerDock.tscn").instantiate()
