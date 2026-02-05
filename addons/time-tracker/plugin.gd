@@ -131,6 +131,10 @@ func _on_editor_base_ready() -> void:
 			_on_main_screen_changed(button_node.text)
 			break
 
+	if _dock_instance:
+		if not _dock_instance._active_tracking:
+			_dock_instance._start_tracking()
+
 func _on_main_screen_changed(main_screen: String) -> void:
 	if (_dock_instance && is_instance_valid(_dock_instance)):
 		_dock_instance.set_main_view(main_screen)
