@@ -109,7 +109,7 @@ func _on_editor_base_ready() -> void:
 		if (!(child_node is HBoxContainer)):
 			continue
 
-		var potential_button : Button = child_node.get_child(0)
+		var potential_button := child_node.get_child(0) as Button
 		if (!potential_button || !is_instance_valid(potential_button)):
 			continue
 		# 2D or 3D is pretty much guaranteed to be there. We have to check it
